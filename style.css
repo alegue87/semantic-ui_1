@@ -1,0 +1,313 @@
+/*
+Theme Name: Semantic-ui 1
+Author: Alessio
+Author URI: none
+Description: Tema con semantic-ui
+Version: 1.0
+*/
+
+html {
+  font-family: "Noto Serif"!important;
+}
+
+#wpadminbar {
+  display:none!important;
+}
+
+.a-background-main.container {
+  background: url(./img/rocky-mountain.jpeg) 50% 50% no-repeat !important;
+  background-size: cover !important;
+  min-height: 100vh;
+  margin: 0px !important;
+  padding:0px !important;
+}
+.a-main.container {
+  min-height:100vh;
+}
+
+@media (min-width:768px) {
+  .a-header.row {
+    border-top: 1px lightgrey solid;
+    border-bottom: 1px lightgrey solid;
+  }
+
+  .a-mobile.menu {
+    display: none!important;
+  }
+
+  /* amplia dimensione item per categorie 
+     cosi da farlo essere uguale al dropdown */
+  .simple.dropdown.item {
+    width:10em;
+  }
+  
+  .ui.fixed.menu + .ui.grid,
+  .ui.fixed.menu + .ui.fluid.container {
+    margin-top: 58px;
+    padding-bottom:25px; /* da spazio extra al fondo categorie */
+  }
+
+  .a-spacer{
+    height:80px;
+  }
+}
+
+@media (max-width:767px) {
+  .a-slideout.menu {
+    display: none !important;
+  }
+
+  .a-mobile.menu {
+    display: display;
+  }
+
+  .ui.fixed.menu + .ui.grid,
+  .ui.fixed.menu + .ui.fluid.container {
+    margin-top: 28px;
+    padding-bottom:25px; /* da spazio extra al fondo categorie */
+  }
+  .a-mobile-padder {
+    padding:10px;
+  }
+}
+
+.page-nav {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+/*******************************************************/
+/* Footer
+/*******************************************************/
+
+footer {
+  min-height: 300px;
+  background: #1b1c1d;
+}
+
+/*******************************************************/
+/* Cards
+/*******************************************************/
+
+.card .category-or-tag-link:hover{
+  color:#4183c4;
+}
+.card .category-or-tag-link{
+  color:#1e70bf;
+}
+
+.card .meta .a-time {
+ text-align:right; 
+ float:right; width:auto;
+}
+
+
+a.page-numbers {
+  padding:0px 10px;
+}
+
+a {
+  overflow-wrap: anywhere;
+}
+
+article.a-post .header {
+  padding:10px 0px;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+
+p {
+  text-align: justify;
+  font-size:16px!important;
+}
+ul, li{
+  font-size:16px!important;
+}
+
+.wp-block-quote {
+  border-left: 4px solid #000;
+  margin: 0 0 28px;
+  padding-left: 1em;
+}
+
+.wp-block-quote__citation, .wp-block-quote cite, .wp-block-quote footer {
+  color: #6c7781;
+  font-size: 13px;
+  margin-top: 1em;
+  position: relative;
+  font-style: normal;
+}
+
+figcaption {
+  text-align: center;
+  font-size:13px;
+}
+/*******************************************************/
+/* Slideout menu ( non mobile )
+/*******************************************************/
+.menu .item .label {
+  margin-left:1em!important;
+  margin-right:0px!important;
+}
+.dropdown .menu .item {
+  display: flex!important;
+  justify-content: space-between!important;
+}
+
+.item > i.dropdown.icon {
+  margin-left:3em!important;
+}
+
+/* rende attivo il dropdown delle categorie */
+/* ( aggiungendo la classe 'active' si aprirebbe.. */
+.item.a-active {
+  background: rgba(0, 0, 0, 0.05)!important;
+  color: rgba(0, 0, 0, 0.95)!important;
+  font-weight: normal!important;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+}
+
+/*******************************************************/
+/* menu ( mobile e simili )
+/*******************************************************/
+#search-mobile .input{
+  display:flex;
+}
+
+/*******************************************************/
+/* Ace
+/*******************************************************/
+.ace_content {
+  font-size: 14px;
+}
+
+.wp-block-simple-code-block-ace {
+  margin-top:-2px!important;
+  margin-bottom:15px!important;
+}
+
+/* font utilizzato in backend */
+section.a-post {
+  font-family: "Noto Serif"!important;
+  font-size: 16px!important;
+
+}
+
+/* WordPress */
+.wp-block-embed-wordpress,  .wp-block-embed-youtube {
+  overflow:overlay;
+}
+
+.wp-block-code {
+  font-size:0.8em;
+  white-space: pre-wrap;
+}
+
+
+
+/*******************************************************/
+/* Menu dei contenuti
+/* Utilizza 'visibility' per affiancarsi al contenuto
+/*******************************************************/
+
+.contents-menu ul{
+  list-style-type: none;
+  /*font-size:13px;*/
+}
+
+/* if (<=1011) */
+@media (max-width:1011px){
+  /* disabilita caratteristica fixed */
+  .contents-menu.fixed {
+    position:relative!important;
+    top:auto!important;
+  }
+  /* toglie placeholder */
+  /* (visibility crea una copia del menu non visualizzato) */
+  .contents-menu.placeholder {
+    display:none!important;
+  }
+
+
+}
+
+/* else ( > 1011 )*/
+@media (min-width:1011px){
+  /* posizione iniziale */
+  .contents-menu {
+    transition:all 0.5s ease;
+    left:60%;
+  }
+  /* al momento del superamento */
+  .contents-menu.fixed {
+    left:72%!important;
+  }
+}
+
+
+
+/*******************************************************/
+/* Comment form
+/*******************************************************/
+#commentform .labeled.fluid.input {
+  display:flex;
+  margin:1em 0;
+}
+
+.comment .comment{
+  margin-left:1em!important;
+}
+
+.ui.dividing.header {
+  padding-bottom:0.6em;
+}
+
+i.comment-notes {
+  text-decoration:underline;
+}
+
+/*******************************************************/
+/* wpcf7 ( Contact form )
+/*******************************************************/
+.field br{
+  display:none;
+}
+
+@media (min-width:500px){
+  input[type='text'], input[type='email']{
+    width:50%!important;
+  }
+}
+
+
+/*******************************************************/
+/* Fix per ancore interne: visualizza il titolo sotto 
+/* il menu.
+/*******************************************************/
+:target:before {
+  content:"";
+  display:block;
+  height:63px; /* fixed menu height*/
+  margin:-63px 0 0; /* negative fixed menu height */
+  }
+
+/*******************************************************/
+/* Fix per contenuti embeds 
+/*******************************************************/
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+figure.wp-block-embed {
+  margin:0px!important;
+  text-align: center;
+}
+
+/* essenzialmente per mobile */
+.wp-embed-fix-padding {
+  padding:5px!important;
+}
